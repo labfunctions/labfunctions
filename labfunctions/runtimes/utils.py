@@ -1,5 +1,7 @@
+import os
 from pathlib import Path
 from typing import Any, Dict, Optional, Union
+from click import BadParameter
 
 from labfunctions import defaults
 from labfunctions.conf.jtemplates import get_package_dir, render_to_file
@@ -33,3 +35,9 @@ def git_short_head_id():
 
 def git_last_tag():
     return execute_cmd("git describe --tags")
+
+def validate_templates_dir_input(path: str, name: str):
+    if not os.path.exists(path):
+        raise BadParameter(f"Templates directory \"{path}\" does not exist.")
+    if not os.path.exists(f"path/Dockerfile.{name}"):
+        raise BadParameter(f"Template with name {name} does not exist in path \"{path}\"")

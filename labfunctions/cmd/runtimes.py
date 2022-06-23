@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 
 import click
+from labfunctions.runtimes.utils import validate_templates_dir_input
 from rich.table import Table
 
 from labfunctions import client, defaults, errors, runtimes, secrets
@@ -247,6 +248,7 @@ def listcli(from_file, url_service):
 def generate(from_file, templates_dir, name):
     """Render  Dockerfile.[name] based on runtimes.yaml"""
     root = Path(os.getcwd())
+    templates_dir and validate_templates_dir_input(f"{root}/{templates_dir}", name)
     spec = runtimes.get_spec_from_file(name, from_file)
     runtimes.generate_dockerfile(root, spec, templates_dir)
     console.print(f"[green]Dockerfile generated as Dockerfile.{name}[/]")
