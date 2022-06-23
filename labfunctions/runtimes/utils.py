@@ -9,7 +9,7 @@ from labfunctions.types.runtimes import DockerSpec, RuntimeData, RuntimeSpec
 from labfunctions.utils import execute_cmd, open_yaml
 
 
-def generate_dockerfile(dst_root: Path, runtime: RuntimeSpec, templates_dir=None):
+def generate_dockerfile(dst_root: Path, runtime: RuntimeSpec, templates_dir: Optional[Path]=None):
     render_to_file(
         runtime.container.base_template,
         str((dst_root / f"Dockerfile.{runtime.name}").resolve()),
