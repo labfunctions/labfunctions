@@ -10,7 +10,11 @@ def get_package_dir(pkg):
 
 
 def render(filename, templates_dir=None, *args, **kwargs):
-    path = f"{get_package_dir('labfunctions')}/conf/templates" if templates_dir is None else get_package_dir(templates_dir)
+    path = (
+        f"{get_package_dir('labfunctions')}/conf/templates"
+        if templates_dir is None
+        else templates_dir
+    )
     env = Environment(
         loader=FileSystemLoader(path),
         autoescape=select_autoescape(),
