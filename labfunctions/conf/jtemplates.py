@@ -1,3 +1,5 @@
+import errno
+from click import BadParameter
 import importlib.util
 import os
 
@@ -25,6 +27,12 @@ def render(filename, templates_dir=None, *args, **kwargs):
 
 def render_to_file(template, dst, templates_dir=None, *args, **kwargs):
     text = render(template, templates_dir, *args, **kwargs)
-    with open(dst, "w", encoding="utf-8") as f:
-        f.write(text)
-    return text
+    try:
+        with open(dst, "w", encoding="utf-8") as f:
+            f.write(text)
+        return text
+    except OSError as e:
+        if e.errno == errno.ENOENT:
+            raise BadParameter(f"Path does not exist: \"{dst}\"")
+        else:
+            raise BadParameter(f"Couldn't open file: \"{dst}\"")
