@@ -25,7 +25,9 @@ build {
     inline = [
       "curl -Ls https://raw.githubusercontent.com/nuxion/cloudscripts/1442b4a3cbf027e64b9b58e453fb06c480fe3414/install.sh | sh",
       "sudo cscli -i docker",
-      "docker pull ${var.docker_lab_image}:${var.docker_lab_version}"
+      "sudo usermod -aG docker `echo $USER`",
+      "sudo usermod -aG op `echo $USER`",
+      "sudo docker pull ${var.docker_lab_image}:${var.docker_lab_version}"
     ]
   }
 }

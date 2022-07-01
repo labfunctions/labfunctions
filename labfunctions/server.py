@@ -46,11 +46,9 @@ def create_db_instance(url) -> AsyncSQL:
     return AsyncSQL(url)
 
 
-def create_projects_store(
-    store_class, store_bucket, base_root="/tmp/labstore"
-) -> AsyncKVSpec:
+def create_projects_store(store_class, store_bucket) -> AsyncKVSpec:
     Class = get_class(store_class)
-    return Class(store_bucket, {"root": base_root})
+    return Class(store_bucket)
 
 
 def create_app(
