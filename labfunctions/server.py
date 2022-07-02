@@ -67,7 +67,14 @@ def create_app(
 
     app.config.CORS_ORIGINS = "*"
 
-    Extend(app)
+    # Extend(app)
+    app.config.OAS_UI_DEFAULT = "swagger"
+    app.config.OAS_UI_REDOC = False
+    app.config.SWAGGER_UI_CONFIGURATION = {
+        "apisSorter": "alpha",
+        "operationsSorter": "alpha",
+        "docExpansion": "none",
+    }
     app.ext.openapi.add_security_scheme(
         "token",
         "http",
