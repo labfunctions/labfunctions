@@ -10,9 +10,10 @@ Current version: 0.8.0
 - [x] workflows.yaml file change to labfile.yaml
 - [x] GPU scaling
 - [x] migration rq to libq
-- [ ] cluster autoscaling as a background process
+- [ ] cluster autoscaling as a background process (x)
 - [ ] Tests: >= 65%
 - [ ] Fix broken tests
+- [x] Refresh Token: rotates whit each refresh request (idea: tracks refresh token with access_token..)
 - [x] Cluster client and Cluster API for creation, destruction and listing of agents and machines
 - [x] Fix smart_open dependecy for the client
 - [x] Doc: release process
@@ -109,7 +110,6 @@ With that in mind, the focus will be in the stabilization of workflows execution
 - [ ] Option to convert a collab into a workflow in a project 
 - [ ] Option to create a project from a notebook
 - [ ] Agent which communicates only doing long-pulling to the server see [Github Actions Runner](https://github.com/actions/runner) 
-- [ ] Refresh Token: rotates whit each refresh request (idea: tracks refresh token with access_token..)
 - [ ] Review private_key strategy, evaluate [sealed boxes](https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes) 
 - [ ] Allows Control plane to spawn machines
 - [ ] If a job dies by timeout or by a runtime error, the docker spawned will still be running, review this case. 

@@ -6,7 +6,7 @@ clusters:
   default:
     name: default
     provider: "gce"
-    machine: "gce-small-default"
+    machine: "gce-small-cpu"
   gpu:
     name: gpu
     provider: "gce"

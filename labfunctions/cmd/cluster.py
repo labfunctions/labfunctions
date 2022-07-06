@@ -53,9 +53,10 @@ def clustercli():
 @click.option(
     "--cluster-name", "-C", default="default", help="Cluster where it should run"
 )
+@click.option("--timeout", "-t", default="15m", help="Timeout of the task to complete")
 @click.option("--use-public", "-P", is_flag=True, default=False, help="Use public ip")
 def create_instancecli(
-    from_file, cluster_name, deploy, use_public, qnames, agent_image
+    from_file, cluster_name, deploy, use_public, qnames, agent_image, timeout
 ):
     """It will create a new instance in the cluster choosen"""
     nbclient = client.from_file(from_file, url_service=URL)
@@ -72,6 +73,7 @@ def create_instancecli(
             docker_version=dv,
             worker_procs=5,
         ),
+        timeout=timeout,
     )
     jobid = nbclient.cluster_create_instance(req)
     console.print(f"Create instance task sent with id [magenta]{jobid}[/]")

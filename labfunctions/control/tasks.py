@@ -38,7 +38,7 @@ async def _deploy_agent(
         docker_version=ctx.docker_version,
         web_redis=settings.WEB_REDIS,
         queue_redis=settings.QUEUE_REDIS,
-        control_queue=settings.CONTROL_QUEUE,
+        # control_queue=settings.CONTROL_QUEUE,
         workflow_service=settings.WORKFLOW_SERVICE,
     )
     res = await cluster.deploy.agent_async(agent_req)
@@ -158,7 +158,6 @@ async def deploy_agent(data: Dict[str, Any]):
         conn=pool,
     )
     instance = await cc.get_instance(ctx.machine_name)
-    ip = instance.private_ips[0]
     log.server_logger.info(f"Deploying agent into {ctx.machine_name}")
     response = await _deploy_agent(
         ctx,

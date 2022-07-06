@@ -31,6 +31,7 @@ build {
       "sudo usermod -aG docker `echo $USER`",
       "sudo usermod -aG op `echo $USER`",
       "sudo docker pull ${var.docker_lab_image}:${var.docker_lab_version}"
+      "sudo docker tag ${var.docker_lab_image}:${var.docker_lab_version} ${var.docker_lab_image}:latest"
     ]
   }
 }
