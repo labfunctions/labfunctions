@@ -52,7 +52,7 @@ def _prepare_docker_cmd(
     cmd = (
         f"docker run -d -v /var/run/docker.sock:/var/run/docker.sock "
         f"-e LF_SERVER=true  --env-file={env_file} "
-        f"--user {docker_uid}:{docker_gid}"
+        f"--user {docker_uid}:{docker_gid} "
         f"{docker_image}:{docker_version} "
         f"{lab_agent_cmd}"
     )
