@@ -169,7 +169,7 @@ async def history_get_output(request, projectid):
 @openapi.response(200, "project")
 @openapi.response(404, "not found")
 @protected()
-async def history_get_task(request, projectid, execid):
+async def history_get_task(request, execid):
     """Get private key based on the project"""
     # pylint: disable=unused-argument
 

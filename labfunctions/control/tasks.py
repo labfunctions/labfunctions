@@ -1,3 +1,4 @@
+# import asyncio
 from datetime import datetime
 from functools import partial
 from typing import Any, Dict
@@ -13,7 +14,7 @@ from labfunctions.runtimes.builder import builder_exec
 from labfunctions.utils import get_version, run_async, today_string
 
 
-@retry(stop=stop_after_attempt(3), wait=wait_random(min=1, max=3))
+@retry(stop=stop_after_attempt(5), wait=wait_random(min=10, max=20))
 async def _deploy_agent(
     ctx: cluster.DeployAgentTask,
     *,
@@ -109,6 +110,7 @@ async def create_instance(data: Dict[str, Any]):
     log.server_logger.debug(f"{instance.machine_name} Created")
     if ctx.agent:
         log.server_logger.info(f"Deploying agent into {instance.machine_name}")
+        # asyncio.sleep(20)
         agent_ctx = cluster.DeployAgentTask(
             machine_name=instance.machine_name,
             cluster_name=ctx.cluster_name,
