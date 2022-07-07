@@ -278,6 +278,8 @@ class AgentRequest(BaseModel):
     advertise_addr: Optional[str] = None
     docker_image: str = AGENT_DOCKER_IMG
     docker_version: str = "latest"
+    docker_uid: int = 1089
+    docker_gid: int = 997
     worker_procs: int = 2
 
 

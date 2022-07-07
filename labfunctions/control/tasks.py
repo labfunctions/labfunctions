@@ -36,6 +36,8 @@ async def _deploy_agent(
         cluster=ctx.cluster_name,
         docker_image=ctx.docker_image,
         docker_version=ctx.docker_version,
+        docker_uid=settings.DOCKER_UID,
+        docker_gid=settings.DOCKER_GID,
         web_redis=settings.WEB_REDIS,
         queue_redis=settings.QUEUE_REDIS,
         control_queue=settings.CONTROL_QUEUE,

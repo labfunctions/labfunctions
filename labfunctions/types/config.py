@@ -85,6 +85,8 @@ class ServerSettings(BaseSettings):
     AGENT_ENV_FILE: str = ".env.dev.docker"
     AGENT_HEARTBEAT_CHECK: int = 60 * 5
     AGENT_HEARTBEAT_TTL: int = 80 * 3
+    AGENT_DOCKER_UID: int = 1089
+    AGENT_DOCKER_GID: int = 997
 
     # Logs:
     LOGLEVEL: str = "INFO"
