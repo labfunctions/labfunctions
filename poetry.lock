@@ -1244,7 +1244,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "libq"
-version = "0.7.2"
+version = "0.7.3"
 description = "Simple async and sync queue system"
 category = "main"
 optional = false
@@ -3790,8 +3790,8 @@ lazy-object-proxy = [
     {file = "lazy_object_proxy-1.7.1-pp37.pp38-none-any.whl", hash = "sha256:d66906d5785da8e0be7360912e99c9188b70f52c422f9fc18223347235691a84"},
 ]
 libq = [
-    {file = "libq-0.7.2-py3-none-any.whl", hash = "sha256:fbfc2fc77c429c3d65346ccd23faaf4c2fa717400403fd67255244ebb8e16c45"},
-    {file = "libq-0.7.2.tar.gz", hash = "sha256:7214e4c61ea7e7ef760667217db79dd7e31afa048b3d5344993a8289ee13b386"},
+    {file = "libq-0.7.3-py3-none-any.whl", hash = "sha256:d8c92a875ca4adff35a21e6ed9bbd65f4b24fd3df2ffb01018bec41dcd51af68"},
+    {file = "libq-0.7.3.tar.gz", hash = "sha256:66a45a90854233a5722d0af4f65f9f66b939a359afc415f0b710c87b5d9ae690"},
 ]
 livereload = [
     {file = "livereload-2.6.3.tar.gz", hash = "sha256:776f2f865e59fde56490a56bcc6773b6917366bce0c267c60ee8aaf1a0959869"},

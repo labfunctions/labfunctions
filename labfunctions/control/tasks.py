@@ -2,7 +2,7 @@ from datetime import datetime
 from functools import partial
 from typing import Any, Dict
 
-from tenacity import retry, stop_after_attempt, wait_random
+from tenacity import RetryError, retry, stop_after_attempt, wait_random
 
 from labfunctions import client, cluster, log, types
 from labfunctions.conf import load_server
@@ -38,7 +38,7 @@ async def _deploy_agent(
         docker_version=ctx.docker_version,
         web_redis=settings.WEB_REDIS,
         queue_redis=settings.QUEUE_REDIS,
-        # control_queue=settings.CONTROL_QUEUE,
+        control_queue=settings.CONTROL_QUEUE,
         workflow_service=settings.WORKFLOW_SERVICE,
     )
     res = await cluster.deploy.agent_async(agent_req)
