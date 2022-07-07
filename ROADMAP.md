@@ -20,6 +20,7 @@ Current version: 0.8.0
 - [x] Task execution
 - [x] Support python 3.7
 - [x] Support python 3.10
+- [x] scopes implementation for cluster endpoints
 
 **MAY:**
 - [ ] Watch events logs on demand
