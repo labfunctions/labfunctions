@@ -20,3 +20,12 @@ gcloud iam service-accounts create SA_NAME
 gcloud iam service-accounts keys create KEY_FILE.json --iam-account=SA_NAME@PROJECT_ID.iam.gserviceac
 count.com
 ```
+
+
+## images
+
+```
+gcloud compute images list
+gcloud compute images delete IMAGE_NAME
+```
+
