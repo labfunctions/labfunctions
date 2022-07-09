@@ -80,7 +80,7 @@ def create_instancecli(
 
 
 @clustercli.command(name="destroy-instance")
-@click.option("--cluster", "-C", default=None, help="Cluster where it will run")
+@click.option("--cluster", "-C", default="default", help="Cluster where it will run")
 @click.argument("machine")
 def destroy_instance(machine, cluster):
     """Destroy a instance by name"""
@@ -96,7 +96,9 @@ def destroy_instance(machine, cluster):
 
 
 @clustercli.command(name="list-instances")
-@click.option("--cluster-name", "-C", default=None, help="list instances from cluster")
+@click.option(
+    "--cluster-name", "-C", default="default", help="list instances from cluster"
+)
 def list_instances(cluster_name):
     """List instances in a cluster"""
     table = Table()

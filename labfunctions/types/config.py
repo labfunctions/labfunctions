@@ -72,7 +72,7 @@ class ServerSettings(BaseSettings):
     EVENTS_STREAM_TTL_SECS: int = 60 * 60
 
     # docker
-    DOCKER_UID: str = "1000"
+    DOCKER_UID: str = "1089"
     DOCKER_GID: str = "997"
 
     # cluster

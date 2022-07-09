@@ -25,11 +25,13 @@ Current version: 0.8.0
 
 
 **MAY:**
+- [ ] Project delete task
 - [ ] Watch events logs on demand
 - [ ] Better info context for cli and lib
 - [-] Timeouts default for server, tasks and clients
 - [x] refactor of cluster package
 - [x] packer images for agent (default, gpu/nvidia)
+- [ ] agent client should keep credentials in a internal cache
 
 **Details**
 
