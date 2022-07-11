@@ -7,9 +7,11 @@ Current version: 0.8.0
 ## Next version 0.10.0
 
 - [ ] Admin endpoint for projects, space used, registry, and so forth
+- [ ] Fix rebuild of runtime in the current mode doesn't update registry value in the db
 
 **MAY:**
 - [ ] plugin system for cli ?
+- [ ] allow user for custom tagging current images
 
 
 ## Next version 0.9.0
