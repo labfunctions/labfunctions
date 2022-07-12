@@ -32,7 +32,7 @@ build {
       "sudo cscli -i docker",
       "sudo usermod -aG docker `echo $USER`",
       "sudo usermod -aG op `echo $USER`",
-      "curl -Ls https://raw.githubusercontent.com/labfunctions/labfunctions/2475f51ea7d1296c4495428da6baccb42062972b/scripts/setup_agent.py -o /tmp/setup_agent.py",
+      "curl -Ls https://raw.githubusercontent.com/labfunctions/labfunctions/055a9ae56bf41a0f66d232cda958fb7167c09a10/scripts/setup_agent.py -o /tmp/setup_agent.py",
       "sudo python3 /tmp/setup_agent.py --registry ${var.docker_registry} --mirror ${var.docker_mirror} --image ${var.docker_lab_image} --version ${var.docker_lab_version} --insecure ${var.docker_registry_insecure}",
     ]
   }
