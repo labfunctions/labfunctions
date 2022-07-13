@@ -39,7 +39,7 @@ volumes:
     mount: /
   gce-agent-gpu:
     name: gce-agent-gpu
-    image: "lab-nvidia-2022-06-30"
+    image: lab-nvidia-090-alpha14
     location: "us-east1-c"
     size: 40
     kind: 'pd-standard'
