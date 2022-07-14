@@ -30,12 +30,6 @@ def clustercli():
 
 @clustercli.command(name="create-instance")
 @click.option(
-    "--from-file",
-    "-f",
-    default=None,
-    help="yaml file with instance request information",
-)
-@click.option(
     "--deploy",
     "-D",
     is_flag=True,
