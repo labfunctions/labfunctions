@@ -47,6 +47,7 @@ Current version: 0.8.0
 - [x] refactor of cluster package
 - [x] packer images for agent (default, gpu/nvidia)
 - [ ] agent client should keep credentials in a internal cache
+- [ ] The agent should pull first the docker-image for the notebook execution (maybe if the tag is current)
 
 **Details**
 
