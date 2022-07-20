@@ -94,6 +94,11 @@ a safe, welcoming space for collaboration, and contributors are expected to
 adhere to the [Contributor Covenant](http://contributor-covenant.org) code of
 conduct.
 
+Please refer to [this
+document](https://github.com/dymaxionlabs/toolkit#dymaxion-labs-toolkit-charter)
+for more details about our current governance model and formal committers
+group.
+
 
 ## License
 
