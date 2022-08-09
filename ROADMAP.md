@@ -17,11 +17,14 @@ Current version: 0.9.0
 
 
 **MAY:**
-- [ ] plugin system for cli ?
+- [ ] plugin system for cli using entrypoints 
 - [ ] allow user for custom tagging current images
 - [ ] Import or change a project in a existing lab functions repo
 - [ ] Registration endpoint?
 - [ ] Custom tagging current builds ?
+- [ ] Log/Event table
+- [ ] Unification of bad and good executions of notebooks
+- [ ] Output folder feature: a default /output folder where any file can go there and should be uploaded to a store by the agent
 
 
 ## version 0.9.0
