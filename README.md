@@ -1,8 +1,5 @@
 # LabFunctions
 
-“I’m a scientist; because I invent, transform, create, and destroy for a living, and when I don’t like something about the world, I change it.” — Pickle Rick 
-
-
 [![labfunctions](https://github.com/labfunctions/labfunctions/actions/workflows/main.yaml/badge.svg)](https://github.com/labfunctions/labfunctions/actions/workflows/main.yaml)
 [![readthedocs](https://readthedocs.org/projects/labfunctions/badge/?version=latest)](https://labfunctions.readthedocs.io/en/latest/)
 [![PyPI - Version](https://img.shields.io/pypi/v/labfunctions)](https://pypi.org/project/labfunctions/)
@@ -11,8 +8,11 @@
 [![Docker last](https://img.shields.io/docker/v/labfunctions/labfunctions/0.7.0)](https://hub.docker.com/r/labfunctions/labfunctions/tags)
 [![codecov](https://codecov.io/gh/labfunctions/labfunctions/branch/main/graph/badge.svg?token=F025Y1BF9U)](https://codecov.io/gh/labfunctions/labfunctions)
 
+“I’m a scientist; because I invent, transform, create, and destroy for a living, and when I don’t like something about the world, I change it.” — Pickle Rick 
+
 
 ## Description 
+
 
 LabFunctions is a set of tools (libraries and services) that allows you to work locally exploring data, building machine learning models and then executing them in production without changing any code. **From EDA to Prod in one push of code.**
 
@@ -83,7 +83,6 @@ See a simple demo of a gpu cluster creation
 - [Maintainable and collaborative pipelines](https://blog.jupyter.org/ploomber-maintainable-and-collaborative-pipelines-in-jupyter-acb3ad2101a7)
 - [The magic of Merlin](https://shopify.engineering/merlin-shopify-machine-learning-platform)
 - [Scale aware approach](https://queue.acm.org/detail.cfm?id=3025012)
-- [
 
 
 ## Contributing
@@ -110,8 +109,7 @@ At that time the problem to solve was to reduce the step required from notebooks
 In 2022 Xavier Petit started working as a freelancer in [DymaxionLabs](https://dymaxionlabs.com/). They have a similar problem to be solved, but with two extra requirements: notebooks should be reproducible, and workloads usually require GPU hardware that should be provisioned on demand. With those two needs in mind, labfunctions was born adding: the idea of a “project” which match to a  Git Repository, the builds of docker containers (called runtimes in labfunctions) and the option to create servers on demand, each step with GPU support.   
 
 
-
 ## License
 
-This project is licensed under Apache 2.0. Refer to
+This project is licensed under MPL 2.0 see: 
 [LICENSE.txt](https://github.com/labfunctions/labfunctions/blob/main/LICENSE).
