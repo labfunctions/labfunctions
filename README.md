@@ -8,21 +8,37 @@
 [![Docker last](https://img.shields.io/docker/v/labfunctions/labfunctions/0.7.0)](https://hub.docker.com/r/labfunctions/labfunctions/tags)
 [![codecov](https://codecov.io/gh/labfunctions/labfunctions/branch/main/graph/badge.svg?token=F025Y1BF9U)](https://codecov.io/gh/labfunctions/labfunctions)
 
+“I’m a scientist; because I invent, transform, create, and destroy for a living, and when I don’t like something about the world, I change it.” — Pickle Rick 
+
 
 ## Description 
 
-LabFunctions is a library and a service that allows you to run parametrized notebooks on demand.
+
+LabFunctions is a set of tools (libraries and services) that allows you to work locally exploring data, building machine learning models and then executing them in production without changing any code. **From EDA to Prod in one push of code.**
 
 It was thought to empower different data roles to put notebooks into production whatever they do, this notebooks could be models, ETL process, crawlers, etc. This way of working should allow going backward and foreward in the process of building data products. 
 
 Although this tool allow different workflows in a data project, we propose this one as an example:
 ![Workflow](./docs/img/schemas-workflow.jpg)
 
-## Status
+[+ Info](https://algorinfo.notion.site/LabFunctions-2c1544f17270460eac686b2cc2eeb1cd)
+
+## Status 
 
 > ⚠️ Although the project is considered stable 
 > please keep in mind that LabFunctions is still under active development
 > and therefore full backward compatibility is not guaranteed before reaching v1.0.0., APIS could change.
+
+## Roadmap
+
+Next generation 0.10 
+
+Working on the next generation of LabFunctions. It will allow other kinds of semantics 
+like for instance attaching volumes to Jobs, or scheduling pods in a K8S platform. 
+
+State tunned: [NextGen](https://algorinfo.notion.site/Next-Gen-0-10-2742d705144342089f6dac86e0c8e684)
+
+The development of new features and refactoring will happen in a new long-lived branch called **nextgen-010**, keeping the main branch only for patches to the version [0.9](https://github.com/labfunctions/labfunctions/tree/releases/0.9.0)
 
 
 ## Features
@@ -36,7 +52,7 @@ Some features can be used standalone, and others depend on each other.
 | Build Runtimes      | Beta   | Build OCI compliance continers (Docker) and store it. | 
 | Runtimes templates  | Stable | Genereate Dockerfile based on templates
 | Create and destroy servers | Alpha | Create and delete Machines in different cloud providers |
-| GPU Support | Beta | Allows to run workloads that requires GPU 
+| GPU Support | Stable | Allows to run workloads that requires GPU 
 | Execution History | Alpha | Track notebooks & workflows executions |
 | Google Cloud support | Beta | Support google store and google cloud as provider |
 | Secrets managment | Alpha | Encrypt and manager private data in a project | 
@@ -56,10 +72,6 @@ See a simple demo of a gpu cluster creation
 [https://www.youtube.com/watch?v=-R7lJ4dGI9s](https://www.youtube.com/watch?v=-R7lJ4dGI9s)
 
 
-## :earth_americas: Roadmap
-
-See [Roadmap](/ROADMAP.md) *draft*
-
 ## :post_office: Architecture
 
 ![labfunctions architecture](/docs/img/platform-workflows.jpg)
@@ -71,7 +83,6 @@ See [Roadmap](/ROADMAP.md) *draft*
 - [Maintainable and collaborative pipelines](https://blog.jupyter.org/ploomber-maintainable-and-collaborative-pipelines-in-jupyter-acb3ad2101a7)
 - [The magic of Merlin](https://shopify.engineering/merlin-shopify-machine-learning-platform)
 - [Scale aware approach](https://queue.acm.org/detail.cfm?id=3025012)
-- [
 
 
 ## Contributing
@@ -98,8 +109,7 @@ At that time the problem to solve was to reduce the step required from notebooks
 In 2022 Xavier Petit started working as a freelancer in [DymaxionLabs](https://dymaxionlabs.com/). They have a similar problem to be solved, but with two extra requirements: notebooks should be reproducible, and workloads usually require GPU hardware that should be provisioned on demand. With those two needs in mind, labfunctions was born adding: the idea of a “project” which match to a  Git Repository, the builds of docker containers (called runtimes in labfunctions) and the option to create servers on demand, each step with GPU support.   
 
 
-
 ## License
 
-This project is licensed under Apache 2.0. Refer to
+This project is licensed under MPL 2.0 see: 
 [LICENSE.txt](https://github.com/labfunctions/labfunctions/blob/main/LICENSE).
